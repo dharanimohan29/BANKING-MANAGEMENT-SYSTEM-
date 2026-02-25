@@ -5,7 +5,8 @@ edit this template
  */
 /**
  *
- * @author balamurugan.s
+ * @author dharani m
+
  */
 public class navigation extends javax.swing.JFrame {
  /**
