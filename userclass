@@ -1,0 +1,34 @@
+import java.io.*;
+class MyObjectOutputStream extends ObjectOutputStream {
+MyObjectOutputStream() throws IOException
+{
+super();
+}
+MyObjectOutputStream(OutputStream o) throws IOException
+{
+super(o); }
+public void writeStreamHeader() throws IOException
+{ }
+}/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/licensedefault.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit
+this template
+ */
+/**
+ *
+ * @author sss
+ */
+public class user implements Serializable {
+ String name,uname,pword, pin,acc_no;
+
+public user(String n,String a,String b , String u,String p)
+{
+name=n;
+acc_no=a;
+pin=b;
+uname=u;
+pword=p;
+}
+}
+
+} 
