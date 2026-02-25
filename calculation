@@ -1,0 +1,40 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/licensedefault.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit
+this template
+ */
+/**
+ *
+ * @author sss
+ */
+import java.lang.*;
+import java.util.*;
+public class calcu {
+ int d=500,c,a;
+
+
+
+
+ public int dep(int x)
+ {
+
+ c=d+x;
+
+ return c;
+ }
+ public int with(int y)
+ {
+
+ if(y>=1000)
+ {
+ a=c-y;
+ return a;
+ }
+ else
+ {
+ return c;
+ }
+ }
+
+
+} 
