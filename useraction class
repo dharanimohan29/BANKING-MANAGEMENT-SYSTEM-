@@ -1,0 +1,77 @@
+USERACTION CLASS CODE:
+import java.io.*;/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/licensedefault.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit
+this template
+ */
+/**
+ *
+ * @author sss
+ */
+public class useraction {
+ public static void add(user ob1)throws Exception
+ {
+ File f = new File("C:\\Users\\sss\\Desktop\\user.txt");
+ try {
+ if(f.length()==0)
+ {
+ ObjectOutputStream oos= new
+ObjectOutputStream(new
+FileOutputStream("C:\\Users\\sss\\Desktop\\user.txt", true));
+ oos.writeObject(ob1);
+ oos.close();
+ }
+ else{
+ MyObjectOutputStream oos = new
+MyObjectOutputStream(new
+FileOutputStream("C:\\Users\\sss\\Desktop\\user.txt",true));
+ oos.writeObject(ob1);
+ oos.close();
+ }
+ }
+ catch (Exception e) {
+ System.out.println("Error Occurred" + e);
+ } }
+ public static boolean search(String u,String p)throws Exception
+ {
+ ObjectInputStream fread=new ObjectInputStream(new
+FileInputStream("C:\\Users\\sss\\Desktop\\user.txt"));
+ user ob;
+ while(true)
+ {
+ try
+ {
+ ob=(user)fread.readObject();
+ if(ob.uname.equals(u)&& ob.pword.equals(p))
+ {
+ fread.close();
+ return true;
+ } }
+ catch(EOFException e)
+ {
+ break;
+ } }
+ fread.close();
+ return false; }
+public static boolean check(String x)throws Exception
+ {
+ ObjectInputStream fread=new ObjectInputStream(new
+FileInputStream("C:\\Users\\sss\\Desktop\\user.txt"));
+user u;
+while(true)
+{
+try
+{
+u=(user)fread.readObject();
+if(u.pin.equals(x));
+{
+fread.close();
+return true;
+} }
+catch(EOFException e)
+{
+break;
+} }
+fread.close();
+return false;
+ }
